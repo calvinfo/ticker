@@ -1,0 +1,53 @@
+<html>
+<head>
+  <script src="build/build.js"></script>
+</head>
+<body>
+  <canvas id="test"></canvs>
+  <script>
+    var canvas = document.getElementById("test");
+
+    var ctx = canvas.getContext('2d');
+
+    function getTop (angle) {
+        return Math.sqrt(y);
+    };
+
+    function drawRect(angle) {
+
+        angle += Math.PI / 2;
+
+        var x = { left : 25, right : 75 };
+        var y = { top:   0, bottom : 100 };
+
+        x.diff = Math.sin(angle) * 2;
+        y.diff = y.bottom + ((y.bottom - y.top) / 2) * Math.cos(angle);
+
+        var isFront = y.diff < y.bottom;
+
+        var rect = { left   : x.left - x.diff
+                   , right  : x.right + x.diff
+                   , top    : y.top + y.diff
+                   , bottom : y.bottom };
+
+        ctx.beginPath();
+        ctx.moveTo(rect.left, rect.top);
+        ctx.lineTo(x.left, rect.bottom);
+        ctx.lineTo(x.right, rect.bottom);
+        ctx.lineTo(rect.right, rect.top);
+        ctx.lineTo(rect.left, rect.top);
+        if (isFront)
+          ctx.stroke();
+        else
+          ctx.fill();
+    }
+
+    var i = 0;
+    setInterval(function () {
+      ctx.clearRect(0, 0, 150, 350);
+      drawRect(i);
+      i -= Math.PI / 8;
+    }, 50);
+  </script>
+</body>
+</html>
