@@ -1,0 +1,16 @@
+<html>
+<head>
+  <script src="build/build.js"></script>
+</head>
+<body>
+  <canvas id="test"></canvas>
+  <script>
+    var Flap = require('ticker/flap');
+    var canvas = document.getElementById("test");
+    var ctx = canvas.getContext('2d')
+
+    var flap = new Flap();
+    flap.advance(ctx);
+  </script>
+</body>
+</html>

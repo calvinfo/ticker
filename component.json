@@ -10,7 +10,9 @@
   "development": {},
   "license": "MIT",
   "scripts": [
-    "index.js"
+    "index.js",
+    "flap.js",
+    "flip.js"
   ],
   "styles": [
     "ticker.css"
