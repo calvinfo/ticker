@@ -12,7 +12,7 @@
   "scripts": [
     "index.js",
     "flap.js",
-    "flip.js"
+    "flip-number.js"
   ],
   "styles": [
     "ticker.css"

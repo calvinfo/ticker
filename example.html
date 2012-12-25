@@ -5,12 +5,13 @@
 <body>
   <canvas id="test"></canvas>
   <script>
-    var Flap = require('ticker/flap');
+    var FlipNumber = require('ticker/flip-number');
     var canvas = document.getElementById("test");
     var ctx = canvas.getContext('2d')
 
-    var flap = new Flap();
-    flap.advance(ctx);
+    var flipNumber = new FlipNumber(ctx);
+    setTimeout(function () { flipNumber.draw(); flipNumber.advance(); }, 100);
+
   </script>
 </body>
 </html>
