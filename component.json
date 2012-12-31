@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "component/autoscale-canvas" : "*"
+    "component/select" : "0.0.1",
+    "manuelstofer/each" : "1.3.3"
   },
   "development": {},
   "license": "MIT",

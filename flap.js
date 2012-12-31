@@ -11,8 +11,8 @@ function Flap (options) {
   this.angle = 0;
   this.x = 0;
   this.y = 0;
-  this.width = 50;
-  this.height = 100;
+  this.width = 63;
+  this.height = 90;
 }
 
 
